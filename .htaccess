@@ -1,0 +1,9 @@
+RewriteEngine On
+
+Header set Access-Control-Allow-Origin "*"
+AddDefaultCharset UTF-8
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^index.php [QSA,L]
+RewriteRule ^/$ public/ [L]
